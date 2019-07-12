@@ -1,7 +1,17 @@
 {
   "name": "bamburgh-vue-ui-kit-free",
   "version": "1.0.0",
-  "private": true,
+  "title": "Bamburgh Vue.js UI Kit FREE",
+  "description": "This free UI Kit features the most common and useful elements, styles and components that will help you quickly bootstrap your project.",
+  "author": {
+    "name": "UiFort.com",
+    "url": "https://uifort.com/free-ui-kits/bamburgh-vue-ui-kit-free.html"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uifort/bamburgh-vue-ui-kit-free"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

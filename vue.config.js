@@ -1,8 +1,9 @@
 module.exports = {
-    runtimeCompiler: true,
+    runtimeCompiler: undefined,
     productionSourceMap: false,
-
-    publicPath: process.env.NODE_ENV === 'production'
-        ? './'
-        : '/'
+    publicPath: '/bamburgh-vue-ui-kit-free/',
+    outputDir: 'bamburgh-vue-ui-kit-free',
+    assetsDir: undefined,
+    parallel: undefined,
+    css: undefined
 }
