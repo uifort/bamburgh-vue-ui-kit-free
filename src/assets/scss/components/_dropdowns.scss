@@ -1,0 +1,40 @@
+// Dropdowns
+
+.btn-group {
+  transition: $transition-base;
+
+  & > .btn {
+    transform: translateY(0px);
+  }
+
+  &:hover {
+    & > .btn {
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.dropdown-item {
+  transition: $transition-base;
+}
+
+// Dropdown menu
+
+.dropdown-menu {
+  box-shadow: $dropdown-box-shadow;
+  display: block;
+  transition: visibility .25s,opacity .25s;
+  opacity: 0;
+  visibility: hidden;
+
+  &.show {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.dropdown-toggle::after {
+  position: relative;
+  top: 2px;
+}

@@ -1,0 +1,15 @@
+// Pagination
+
+.pagination {
+
+  .page-link {
+    @include border-radius($border-radius-xs !important);
+    margin: 0 ($spacer / 3.5);
+  }
+
+  .page-item.active {
+    .page-link {
+      box-shadow: $box-shadow-sm;
+    }
+  }
+}

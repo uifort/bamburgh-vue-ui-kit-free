@@ -1,0 +1,185 @@
+// Demo
+
+.demo-wrapper {
+  .example-box > div {
+    & > .badge,
+    & > .btn-group,
+    & > .btn {
+      margin: 0 ($spacer / 1.5) ($spacer / 1.5) 0;
+    }
+  }
+}
+
+// Slick slider
+
+.slider-item {
+  background: $gray-300;
+  @include border-radius($border-radius);
+  color: $gray-600;
+  font-size: 36px;
+  padding: 0;
+  position: relative;
+  height: 150px;
+  line-height: 150px;
+  text-align: center;
+  transition: $transition-base;
+}
+
+.slick-center {
+  .slider-item {
+    background: $gray-500;
+    color: $gray-700;
+  }
+}
+
+
+// Demo image placeholder
+
+.demo-img-wrapper {
+  background: $gray-100;
+  @include border-radius($border-radius-sm);
+  color: $gray-600;
+  font-size: 4rem;
+  padding: 3rem;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  transition: $transition-base;
+
+  &:after {
+    content: 'This demo placeholder should be replaced with either images or components.';
+    position: absolute;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    font-size: $font-size-base;
+    background: $tooltip-bg;
+    @include border-radius($border-radius-sm);
+    visibility: hidden;
+    opacity: 0;
+    padding: ($spacer);
+    transition: $transition-base;
+    color: $white;
+    line-height: 1.6rem;
+  }
+
+  &:hover {
+    border-color: $primary;
+
+    &:after {
+      visibility: visible;
+      opacity: .9;
+    }
+  }
+
+  svg {
+    margin: auto;
+  }
+}
+
+.demo-img-wrapper-discrete {
+  background: rgba($white, .1);
+  border: 0 !important;
+  font-size: 3rem;
+  color: rgba($white, .6);
+
+  &:after {
+    font-size: .86rem !important;
+  }
+
+  &:hover {
+    background: rgba($white, .15);
+  }
+}
+
+.demo-img-wrapper-dark {
+  background: $gray-700;
+  border-color: $black;
+
+  &:after {
+    background: $gray-900;
+    color: $gray-400;
+  }
+
+  &:hover {
+    border-color: $gray-300;
+  }
+}
+
+// Demo headings
+
+.heading-1 {
+  font-weight: bold;
+  font-size: 4rem;
+  margin: 0;
+  color: $gray-600;
+}
+
+.heading-2 {
+  font-weight: bold;
+  font-size: 2rem;
+  position: relative;
+  padding-left: ($spacer * 2);
+  margin: 0;
+
+  &::before {
+    content: '::';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: $primary;
+  }
+}
+
+.heading-3 {
+  text-transform: uppercase;
+  font-size: $font-size-base;
+  font-weight: bold;
+  margin: 0 0 1rem;
+  padding: 0;
+  color: $gray-800;
+}
+
+// Sticky demo headings
+
+.heading-1 {
+
+  &.stick-parent {
+    opacity: 0;
+    transition: opacity .2s, transform .2s;
+    position: absolute;
+    visibility: hidden;
+    background: $white;
+    z-index: 7;
+    padding: 0 $spacer !important;
+    font-size: $h3-font-size;
+    box-shadow: 0 1px 15px rgba(130, 130, 134, 0.3);
+    height: 0;
+    text-indent: -999rem;
+    width: 100%;
+    transform: translateY(-100%);
+
+    &.is_stuck {
+      opacity: 1;
+      position: fixed;
+      visibility: visible;
+      height: 68px;
+      text-indent: initial;
+      transform: translateY(0%);
+    }
+  }
+}
+
+.demo-stick-nav {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0 $spacer;
+  transition: $transition-base;
+  z-index: 22;
+  height: 68px;
+
+  &.is_stuck {
+    visibility: visible;
+    opacity: 1;
+  }
+}

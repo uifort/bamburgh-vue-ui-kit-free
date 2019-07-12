@@ -1,0 +1,70 @@
+// Demo
+
+// Colors section
+
+.color-swatch {
+  position: relative;
+  margin: 0 0 ($spacer * 3);
+
+  &--bg {
+    @include border-top-radius($border-radius-lg);
+    height: 84px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &--title {
+    background: $white;
+    border: $gray-400 solid 1px;
+    @include border-bottom-right-radius($border-radius-lg * 2);
+    @include border-bottom-left-radius($border-radius-lg);
+    padding: ($spacer / 1.5) $spacer;
+    text-align: center;
+    color: $gray-700;
+  }
+}
+
+// Icons
+
+.icon-demo-box {
+  padding: ($spacer * 5) 0 0;
+  text-align: center;
+
+  .card {
+    margin: 0 ($spacer) ($spacer * 2);
+    display: inline-block;
+    padding: 1rem 0 !important;
+    width: 120px;
+    text-align: center;
+    transition: $transition-base;
+
+    i,
+    span {
+      font-size: 2.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.8);
+      z-index: 9;
+      border-radius: 30px;
+      box-shadow: $modal-content-box-shadow-xs;
+    }
+  }
+}
+
+.heading-2-demo {
+  padding-left: 0;
+  font-size: 2.5rem;
+  text-align: center;
+
+  &::before {
+    display: none;
+  }
+
+  & + p {
+    margin: 0;
+    color: $gray-700;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}

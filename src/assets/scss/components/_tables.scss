@@ -1,0 +1,19 @@
+// Tables
+
+.table {
+  font-size: $font-size-base;
+
+  thead th {
+    text-transform: uppercase;
+    background: $gray-200;
+    font-size: $font-size-sm;
+  }
+
+  tr {
+    transition: $transition-base;
+  }
+
+  td, th {
+    vertical-align: middle;
+  }
+}
